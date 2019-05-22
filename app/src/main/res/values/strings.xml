@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Taxes</string>
+    <string name="check_out">Check Out</string>
+    <string name="products_empty">You have not added any products to your cart.</string>
+    <string name="sales_taxes">Sales Taxes</string>
+    <string name="total">Total</string>
+</resources>
