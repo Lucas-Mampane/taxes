@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements AddButtonClickLis
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("My App");
+        getSupportActionBar().setTitle(getString(R.string.shopping_list));
         viewModel = new PurchaseViewModel();
         products = new ArrayList<>();
 

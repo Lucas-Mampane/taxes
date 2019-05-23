@@ -24,7 +24,7 @@ public class CheckOutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_out);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Check Out");
+        getSupportActionBar().setTitle(getString(R.string.check_out));
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
