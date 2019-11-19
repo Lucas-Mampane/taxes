@@ -1,15 +1,15 @@
 package com.example.taxes.view;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taxes.R;
 import com.example.taxes.model.Product;
@@ -18,12 +18,13 @@ import com.example.taxes.view.adapter.AddButtonClickListener;
 import com.example.taxes.view.adapter.ProductsListAdapter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AddButtonClickListener {
 
     public static final String PRODUCTS_PARCEL = "products_parcel";
 
-    private ArrayList<Product> products;
+    private List<Product> products;
     private PurchaseViewModel viewModel;
 
     @Override
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements AddButtonClickLis
                 Toast.makeText(this, getString(R.string.products_empty), Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(this, CheckOutActivity.class);
-                intent.putParcelableArrayListExtra(PRODUCTS_PARCEL, products);
+                intent.putParcelableArrayListExtra(PRODUCTS_PARCEL, new ArrayList<>(products));
                 startActivity(intent);
             }
             return true;
